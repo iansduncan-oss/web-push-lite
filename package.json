@@ -1,0 +1,52 @@
+{
+  "name": "web-push-lite",
+  "version": "0.1.0",
+  "description": "Zero-dependency Web Push (VAPID) sender for Node.js — mints the JWT and encrypts the payload (RFC 8291) with only node:crypto. No native addons, no dependency tree.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.0.0"
+  },
+  "keywords": [
+    "web-push",
+    "webpush",
+    "vapid",
+    "push-notifications",
+    "notifications",
+    "service-worker",
+    "rfc8291",
+    "aes128gcm",
+    "zero-dependency",
+    "crypto"
+  ],
+  "license": "MIT",
+  "author": "Ian Duncan <ian@aviontechs.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iansduncan-oss/web-push-lite.git"
+  },
+  "homepage": "https://github.com/iansduncan-oss/web-push-lite#readme",
+  "bugs": {
+    "url": "https://github.com/iansduncan-oss/web-push-lite/issues"
+  }
+}
